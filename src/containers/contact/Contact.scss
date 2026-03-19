@@ -52,6 +52,22 @@
   margin-top: -4rem;
 }
 
+.contact-image-div {
+  animation: floatContact 7s ease-in-out infinite;
+}
+
+@keyframes floatContact {
+  0% {
+    transform: translateY(0px);
+  }
+  50% {
+    transform: translateY(-12px);
+  }
+  100% {
+    transform: translateY(0px);
+  }
+}
+
 /* Media Query */
 @media (max-width: 1380px), (max-width: 768px) {
   .contact-title {

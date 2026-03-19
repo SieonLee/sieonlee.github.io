@@ -20,12 +20,29 @@
   height: auto;
 }
 
+.skills-image-div {
+  animation: floatSkills 6.5s ease-in-out infinite;
+  transform-origin: center;
+}
+
 .skills-heading {
   font-size: 56px;
   font-weight: 400;
 }
 .subTitle {
   color: $subTitle;
+}
+
+@keyframes floatSkills {
+  0% {
+    transform: translateY(0px) rotate(0deg);
+  }
+  50% {
+    transform: translateY(-10px) rotate(1deg);
+  }
+  100% {
+    transform: translateY(0px) rotate(0deg);
+  }
 }
 
 /* Media Query */

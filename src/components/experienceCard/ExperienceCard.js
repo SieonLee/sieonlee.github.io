@@ -3,12 +3,24 @@ import "./ExperienceCard.scss";
 import ColorThief from "colorthief";
 
 export default function ExperienceCard({cardInfo, isDark}) {
-  const [colorArrays, setColorArrays] = useState([]);
+  const [colorArrays, setColorArrays] = useState([15, 76, 92]);
   const imgRef = createRef();
 
   function getColorArrays() {
-    const colorThief = new ColorThief();
-    setColorArrays(colorThief.getColor(imgRef.current));
+    if (!imgRef.current) {
+      return;
+    }
+
+    try {
+      const colorThief = new ColorThief();
+      const nextColor = colorThief.getColor(imgRef.current);
+      if (nextColor) {
+        setColorArrays(nextColor);
+      }
+    } catch (error) {
+      // Keep the default banner color when image color extraction is unsupported.
+      setColorArrays([15, 76, 92]);
+    }
   }
 
   function rgb(values) {

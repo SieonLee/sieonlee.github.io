@@ -51,6 +51,7 @@
 
 .education-card-right {
   max-width: 70%;
+  flex: 1;
 }
 
 .education-text-subHeader {
@@ -131,4 +132,8 @@
     max-width: 80%;
     margin: auto;
   }
+}
+
+.education-card.no-logo .education-card-right {
+  max-width: 100%;
 }

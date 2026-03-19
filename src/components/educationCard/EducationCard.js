@@ -17,12 +17,12 @@ export default function EducationCard({school}) {
   };
   const {isDark} = useContext(StyleContext);
 
-  if (!school.logo)
-    console.error(`Image of ${school.name} is missing in education section`);
   return (
     <div>
       <Fade left duration={1000}>
-        <div className="education-card">
+        <div
+          className={school.logo ? "education-card" : "education-card no-logo"}
+        >
           {school.logo && (
             <div className="education-card-left">
               <img
@@ -55,11 +55,13 @@ export default function EducationCard({school}) {
                 {school.duration}
               </p>
               <p className="education-text-desc">{school.desc}</p>
-              <div className="education-text-bullets">
-                <ul>
-                  <GetDescBullets descBullets={school.descBullets} />
-                </ul>
-              </div>
+              {school.descBullets && school.descBullets.length > 0 && (
+                <div className="education-text-bullets">
+                  <ul>
+                    <GetDescBullets descBullets={school.descBullets} />
+                  </ul>
+                </div>
+              )}
             </div>
           </div>
         </div>

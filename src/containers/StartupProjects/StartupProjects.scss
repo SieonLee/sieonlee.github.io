@@ -25,6 +25,7 @@
   border-radius: 10px;
   border: 1px solid $lightBorder1;
   justify-content: center;
+  overflow: hidden;
 }
 .project-card-light {
   box-shadow: $lightBoxShadowDark 0px 10px 30px -15px;
@@ -45,9 +46,11 @@
 }
 .project-card-light:hover {
   box-shadow: $lightBoxShadowDark 0px 20px 30px -10px;
+  transform: translateY(-10px);
 }
 .project-card-dark:hover {
   box-shadow: 0px 20px 30px -10px $darkBoxShadow;
+  transform: translateY(-10px);
 }
 .project-image {
   position: relative;
@@ -56,6 +59,43 @@
   display: flex;
   justify-content: center;
   align-items: center;
+}
+
+.project-image::before {
+  content: "";
+  position: absolute;
+  inset: 18px;
+  border-radius: 28px;
+  background: radial-gradient(
+    circle at top,
+    rgba(123, 184, 201, 0.28),
+    rgba(15, 76, 92, 0.08)
+  );
+  filter: blur(2px);
+  z-index: 0;
+}
+
+.card-image {
+  position: relative;
+  z-index: 1;
+  animation: floatProject 5.8s ease-in-out infinite;
+  transition: transform 0.35s ease;
+}
+
+.project-card:hover .card-image {
+  transform: scale(1.05);
+}
+
+@keyframes floatProject {
+  0% {
+    transform: translateY(0px);
+  }
+  50% {
+    transform: translateY(-10px);
+  }
+  100% {
+    transform: translateY(0px);
+  }
 }
 
 .projects-container {

@@ -26,12 +26,14 @@
   -webkit-transition: all 0.3s ease;
   -o-transition: all 0.3s ease;
   transition: all 0.3s ease;
+  overflow: hidden;
 }
 .certificate-detail-div {
   text-align: center;
 }
 .certificate-card:hover {
   box-shadow: $lightBoxShadowDark 0px 20px 30px -10px;
+  transform: translateY(-10px);
 }
 .dark-mode.certificate-card:hover {
   box-shadow: $achievementCertificateCardHoverDark 0px 20px 30px -10px;
@@ -43,6 +45,22 @@
   display: flex;
   justify-content: center;
   align-items: center;
+}
+
+.certificate-image-div img {
+  animation: floatCertificate 6s ease-in-out infinite;
+}
+
+@keyframes floatCertificate {
+  0% {
+    transform: translateY(0px);
+  }
+  50% {
+    transform: translateY(-9px);
+  }
+  100% {
+    transform: translateY(0px);
+  }
 }
 .achievement-cards-div {
   display: grid;

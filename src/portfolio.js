@@ -105,16 +105,14 @@ const educationInfo = {
       schoolName: "Stony Brook University (SUNY)",
       subHeader: "Bachelor of Science in Information Systems",
       duration: "May 2018",
-      desc:
-        "Undergraduate foundation in information systems, technical problem solving, and software-oriented data work.",
+      desc: "Undergraduate foundation in information systems, technical problem solving, and software-oriented data work.",
       descBullets: []
     },
     {
       schoolName: "University of Chicago",
       subHeader: "Applied Data Science Program Ambassador",
       duration: "Feb 2026 - Present",
-      desc:
-        "Selected to represent the graduate Applied Data Science program and support recruitment and student engagement.",
+      desc: "Selected to represent the graduate Applied Data Science program and support recruitment and student engagement.",
       descBullets: [
         "Contribute to outreach efforts and help prospective students understand the program experience."
       ]
@@ -127,7 +125,7 @@ const techStack = {
   experience: [
     {
       Stack: "Data Engineering / ETL",
-      progressPercentage: "90%"
+      progressPercentage: "92%"
     },
     {
       Stack: "Machine Learning / Analytics",
@@ -135,11 +133,11 @@ const techStack = {
     },
     {
       Stack: "Python / SQL / Cloud Tools",
-      progressPercentage: "85%"
+      progressPercentage: "92%"
     },
     {
       Stack: "Infrastructure / Monitoring",
-      progressPercentage: "80%"
+      progressPercentage: "90%"
     }
   ],
   displayCodersrank: false
@@ -153,8 +151,7 @@ const workExperiences = {
       company: "Nexon Korea",
       companylogo: require("./assets/images/programmer.svg").default,
       date: "May 2022 - Jul 2025 | Pangyo, South Korea",
-      desc:
-        "Built production data systems and ML infrastructure for analytics, recommendation, and large-scale game launch support.",
+      desc: "Built production data systems and ML infrastructure for analytics, recommendation, and large-scale game launch support.",
       descBullets: [
         "Designed and deployed ML-ready data infrastructure including a 500GB+ vector embedding store on AWS OpenSearch (k-NN) for scalable similarity search.",
         "Built Python-based batch and streaming ETL pipelines and SQL Server auditing workflows, reducing system downtime by 25%.",
@@ -168,8 +165,7 @@ const workExperiences = {
       company: "LG CNS Europe",
       companylogo: require("./assets/images/skill.svg").default,
       date: "Mar 2021 - Feb 2022 | Wroclaw, Poland",
-      desc:
-        "Worked on manufacturing data integration, automation, and reporting systems in a production environment.",
+      desc: "Worked on manufacturing data integration, automation, and reporting systems in a production environment.",
       descBullets: [
         "Refactored SQL stored procedures for real-time manufacturing dashboards, reducing query execution time from minutes to under 10 seconds.",
         "Developed C# automation tools with unit testing and code reviews, improving operational reporting efficiency by 80%.",
@@ -356,7 +352,7 @@ const contactInfo = {
   title: emoji("Contact Me"),
   subtitle:
     "If you're hiring for data science or data engineering internships, I'd be glad to connect.",
-  number: "329-204-0066",
+  number: "",
   email_address: "sieonlee@uchicago.edu"
 };
 

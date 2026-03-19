@@ -6,6 +6,7 @@
   box-shadow: $lightBoxShadowDark 0px 10px 30px -15px;
   border-radius: 10px;
   border: 1px solid $lightBorder1;
+  transition: transform 0.35s ease, box-shadow 0.35s ease;
 }
 
 .experience-card-dark {
@@ -14,10 +15,17 @@
   box-shadow: $lightBoxShadowDark 0px 10px 30px -15px;
   border-radius: 10px;
   border: 1px solid $lightBorder1;
+  transition: transform 0.35s ease, box-shadow 0.35s ease;
 }
 
 .experience-card:hover {
   box-shadow: $lightBoxShadowDark 0px 20px 30px -10px;
+  transform: translateY(-10px);
+}
+
+.experience-card-dark:hover {
+  box-shadow: 0px 20px 30px -10px $darkBoxShadow;
+  transform: translateY(-10px);
 }
 
 .experience-banner {
@@ -89,6 +97,19 @@
   height: 8rem;
   box-shadow: 0 0.5rem 1rem $lightBoxShadowDarker;
   border-radius: 50%;
+  animation: pulseBadge 4.8s ease-in-out infinite;
+}
+
+@keyframes pulseBadge {
+  0% {
+    transform: translateY(0px) scale(1);
+  }
+  50% {
+    transform: translateY(-6px) scale(1.04);
+  }
+  100% {
+    transform: translateY(0px) scale(1);
+  }
 }
 
 .experience-text-role {

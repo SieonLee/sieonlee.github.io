@@ -2,6 +2,8 @@ import React from "react";
 import "./AchievementCard.scss";
 
 export default function AchievementCard({cardInfo, isDark}) {
+  const footerLinks = Array.isArray(cardInfo.footer) ? cardInfo.footer : [];
+
   function openUrlInNewTab(url, name) {
     if (!url) {
       console.log(`URL for ${name} not found`);
@@ -29,7 +31,7 @@ export default function AchievementCard({cardInfo, isDark}) {
         </p>
       </div>
       <div className="certificate-card-footer">
-        {cardInfo.footer.map((v, i) => {
+        {footerLinks.map((v, i) => {
           return (
             <span
               key={i}
