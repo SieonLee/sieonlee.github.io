@@ -13,9 +13,9 @@ const illustration = {
 
 const greeting = {
   username: "Sieon Lee",
-  title: "Data Science and Data Engineering Intern Candidate",
+  title: "Data Science and Data Engineering Intern",
   subTitle: emoji(
-    "M.S. in Applied Data Science candidate at the University of Chicago with 3+ years of experience building production data systems and ML infrastructure. Seeking data science and data engineering internships where I can apply Python, SQL, cloud platforms, and practical machine learning."
+    "UChicago Applied Data Science master's student with 3+ years building production data systems and ML infrastructure. Seeking internships across data science, data engineering, and ML-focused analytics."
   ),
   resumeLink: "/sieon-lee-resume.html",
   displayGreeting: true
